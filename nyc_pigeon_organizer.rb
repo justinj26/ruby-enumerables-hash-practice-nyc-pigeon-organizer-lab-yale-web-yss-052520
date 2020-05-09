@@ -3,6 +3,7 @@ def build_name_array(name, data)
   data[:color].each do |(key, value)|
     value.member? name
     color_array << key.to_s 
+    binding.pry 
   end
   gender_array = []
   data[:gender].each do |(key, value)|
