@@ -1,18 +1,21 @@
 def build_name_array(name, data)
   color_array = []
   data[:color].each do |(key, value)|
-    value.member? name
+    if value.member? name
     color_array << key.to_s 
+   end 
   end
   gender_array = []
   data[:gender].each do |(key, value)|
-    value.include? name
+    if value.member? name
     gender_array << key.to_s 
+   end 
   end
   lives_array = []
   data[:lives].each do |(key, value)|
-    value.member? name
+    if value.member? name
     lives_array << key.to_s 
+   end
   end
   value_hash = {
     :color => color_array,
