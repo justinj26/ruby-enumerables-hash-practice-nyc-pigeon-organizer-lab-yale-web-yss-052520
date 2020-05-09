@@ -39,7 +39,6 @@ def nyc_pigeon_organizer(data)
   name_list = name_list.uniq 
   name_list.each do |name|
     new_hash[name] = build_name_array(name, data)
-    binding.pry
   end
   new_hash
 end
